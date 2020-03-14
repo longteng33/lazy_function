@@ -1,14 +1,16 @@
 # lazy_function
 惰性函数  
 1、现有一个函数，用来获取某时刻的时间，以后调用该函数，都返回第一次调用时的时间  
-```var timeStamp=null;
+```
+var timeStamp=null;
         function getTimeStamp(){
             if(timeStamp){
                 return timeStamp;
             }
             timeStamp=new Date().getTime();
             return timeStamp;
-        }```
+        }
+```
 这种写法的缺点：  
 1）在函数内引用了外部的timeStamp变量，污染外部的变量  
 2）每次执行getTimeStamp，都有进行一次判断  
