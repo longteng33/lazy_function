@@ -13,13 +13,15 @@
 1）在函数内引用了外部的timeStamp变量，污染外部的变量  
 2）每次执行getTimeStamp，都有进行一次判断  
 2、使用惰性函数  
-```var getTimeStamp3=function(){
+```
+var getTimeStamp3=function(){
             var timeStamp=new Date().getTime();
             getTimeStamp3=function(){
                 return timeStamp;
             }
             return timeStamp;
-        }```   
+        }
+```   
 内部函数改变自身的机制  
 在函数内部改变自身  
 例如：  
@@ -34,4 +36,5 @@ var fn=function(){
     }
     return ...
 }
+```
 第一次执行的时候不仅返回值，而且在函数内部改变了自身，下次执行的时候就执行这个被改变的新函数了（虽然它的函数名并没有改变）  
