@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Page Title</title>
+    <style>
+    
+    </style>
+    <!-- <link rel="stylesheet" href= "CSS文件路径"> -->
+</head>
+    
+<body>
+    
+    
+    
+    <script>
+        var timeStamp=null;
+        function getTimeStamp(){
+            if(timeStamp){
+                return timeStamp;
+            }
+            timeStamp=new Date().getTime();
+            return timeStamp;
+        }
+
+        var getTimeStamp2=function(){
+            var timeStamp=new Date().getTime();
+            getTimeStamp2=function(){
+                return timeStamp;
+            }
+            return timeStamp;
+        }
+
+        var getTimeStamp3=function(){
+            var timeStamp=new Date().getTime();
+            getTimeStamp3=function(){
+                return timeStamp;
+            }
+            return timeStamp;
+        }
+    
+    
+    </script>
+</body>
+</html>
